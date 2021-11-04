@@ -1,0 +1,206 @@
+activity_main.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lblpayment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#371228EF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="198dp"
+        android:layout_height="70dp"
+        android:fontFamily="sans-serif-black"
+        android:text="EMI CALCULATOR"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.591" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="92dp"
+        android:text="Principal Amount"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/txt_principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="92dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="373dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="20dp"
+        android:background="#371228EF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/downpayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Down Payment"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/txt_downnpayment" />
+
+    <EditText
+        android:id="@+id/txt_downnpayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp" android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txt_principal"
+        app:layout_constraintTop_toBottomOf="@+id/txt_principal"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interest Rate"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/downpayment"
+        app:layout_constraintTop_toTopOf="@+id/txt_interestrate" />
+
+    <EditText
+        android:id="@+id/txt_interestrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txt_downnpayment"
+        app:layout_constraintTop_toBottomOf="@+id/txt_downnpayment"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="130dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        android:text="Loan Term(Months)"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/txt_termmonths" />
+
+    <EditText
+        android:id="@+id/txt_termmonths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txt_interestrate"
+        app:layout_constraintTop_toBottomOf="@+id/txt_interestrate" />
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Calculate EMI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_termmonths" />
+
+    <TextView
+        android:id="@+id/lbl_emiamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="EmiAmount"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calculate" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="147dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.307"
+        app:srcCompat="@drawable/car_loan_calculator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+MainActivity.java
+
+package com.example.emi;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+import java.text.DecimalFormat;
+import java.util.logging.SimpleFormatter;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    EditText txtPrinicple,txtDownPayment,txtInterestRate,txtLoanTerm;
+    Button btnCalculate; TextView lblResult;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        txtPrinicple=(EditText)findViewById(R.id.txt_principal);
+        txtDownPayment=(EditText)findViewById(R.id.txt_downnpayment);
+        txtInterestRate=(EditText)findViewById(R.id.txt_interestrate);
+        txtLoanTerm=(EditText)findViewById(R.id.txt_termmonths);
+        btnCalculate=(Button)findViewById(R.id.btn_calculate);
+        btnCalculate.setOnClickListener(this);
+        lblResult=(TextView)findViewById(R.id.lbl_emiamount);
+    }
+    public void onClick(View v) {
+
+  try {
+      DecimalFormat formatter=new DecimalFormat("#0.00");
+          double prinicipleAmount= Double.parseDouble(txtPrinicple. getText().toString());
+          double downPayment=Double.parseDouble(txtDownPayment.getText().toString());
+        
+        prinicipleAmount=prinicipleAmount-downPayment;
+        double interestRate=Double.parseDouble(txtInterestRate.getText().toString());
+        interestRate=interestRate/(12*100);
+        double loanTerm=Double.parseDouble(txtLoanTerm.getText().toString());
+        double emi=prinicipleAmount* (interestRate*Math.pow((1+interestRate),loanTerm)) /(Math.pow((1+interestRate),loanTerm)-1);
+        lblResult.setText(String.valueOf(formatter.format(emi)));
+  }
+  catch(Exception e) {
+      Toast.makeText(getBaseContext(), "InvalidInput", Toast.LENGTH_LONG).show();
+  }
+
+  }
+}
